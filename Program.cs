@@ -47,6 +47,10 @@ builder.Services.AddScoped<IDoctorRepository, DoctorServices>();
 builder.Services.AddScoped<DoctorServices>();
 builder.Services.AddScoped<IAppointmentTypeRepository, AppointmentTypeServices>();
 builder.Services.AddScoped<AppointmentTypeServices>();
+builder.Services.AddScoped<IPatientRepository, PatientServices>();
+builder.Services.AddScoped<PatientServices>();
+builder.Services.AddScoped<IAppointmentRepository, AppointmentServices>();
+builder.Services.AddScoped<AppointmentServices>();
 // builder.Services.AddSingleton<Utilities>();
 
 // builder.Services.AddAuthentication(config =>
