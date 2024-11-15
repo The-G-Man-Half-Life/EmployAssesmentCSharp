@@ -9,6 +9,7 @@ using Microsoft.OpenApi.Models;
 // Cargar las variables de entorno
 Env.Load();
 
+
 // Función para validar variables de entorno
 void ValidateEnvVariables(params string[] variables)
 {
@@ -38,9 +39,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySql(connectionString, ServerVersion.Parse("8.0.20-mysql")));
 
+
 // Registrar servicios y repositorios
 builder.Services.AddScoped<IDiseasRepository, DiseasServices>();
 builder.Services.AddScoped<DiseasServices>();
+builder.Services.AddScoped<IDoctorRepository, DoctorServices>();
+builder.Services.AddScoped<DoctorServices>();
+builder.Services.AddScoped<IAppointmentTypeRepository, AppointmentTypeServices>();
+builder.Services.AddScoped<AppointmentTypeServices>();
 // builder.Services.AddSingleton<Utilities>();
 
 // builder.Services.AddAuthentication(config =>
@@ -119,6 +125,8 @@ app.UseWelcomePage(new WelcomePageOptions
 {
     Path = "/"
 });
+
+
 
 app.UseRouting();
 app.UseHttpsRedirection();
