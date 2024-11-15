@@ -1,5 +1,8 @@
 using DotNetEnv;
 using EmployAssesmentCSharp.Data;
+using EmployAssesmentCSharp.Models;
+using EmployAssesmentCSharp.Repositories.Interfaces;
+using EmployAssesmentCSharp.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -36,6 +39,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySql(connectionString, ServerVersion.Parse("8.0.20-mysql")));
 
 // Registrar servicios y repositorios
+builder.Services.AddScoped<IDiseasRepository, DiseasServices>();
+builder.Services.AddScoped<DiseasServices>();
 // builder.Services.AddSingleton<Utilities>();
 
 // builder.Services.AddAuthentication(config =>
