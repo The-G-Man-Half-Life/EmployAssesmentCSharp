@@ -1,0 +1,6 @@
+@EmployAssesmentCSharp_HostAddress = http://localhost:5130
+
+GET {{EmployAssesmentCSharp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

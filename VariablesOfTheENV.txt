@@ -1,0 +1,9 @@
+host = blbqcc5jtkw7abga8aaz-mysql.services.clever-cloud.com
+port = 3306
+uid = u0f2fqq7y3s2jw8c
+database = blbqcc5jtkw7abga8aaz
+password = EGSqMpw0VEfMBWF9rX1x
+key = tank3pro123456789012345678901234567890
+issuer = http://localhost:5151
+audience = public 
+time = 30
