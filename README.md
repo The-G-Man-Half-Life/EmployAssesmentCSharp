@@ -74,3 +74,5 @@ Para los diagramas del sistema se utilizaron las siguientes herramientas:
     Draw.io: Herramienta para crear diagramas de flujo, estructuras de base de datos y diagramas de casos de uso.
     Miro: Herramienta colaborativa para la creación de diagramas interactivos.
     Visual Paradigm Online: Herramienta para diagramas UML, como diagramas de clases y secuencias.
+
+Link de Github:https://github.com/The-G-Man-Half-Life/EmployAssesmentCSharp
